@@ -1,0 +1,23 @@
+.logo{
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#header{
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.hero-image{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+.centered {
+    text-align: center;
+}
