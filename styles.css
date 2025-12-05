@@ -1,23 +1,274 @@
-.logo{
-    width: 150px;
-    height: auto;
+/* GENERAL --------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color:#333;
+    background: white;
+}
+
+img {
     display: block;
-    margin: 0 auto;
+    max-width: 100%;
 }
-#header{
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* HEADER ---------------------------- */
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 45px;
+}
+
+.brand {
     font-weight: bold;
-    color: #333;
+    font-size: 20px;
 }
-.hero-image{
+
+
+.nav-home {
+    color: #3a8076;     /* Teal */
+}
+
+.nav-education {
+    color: #f4d86c;     /* Soft yellow */
+}
+
+.nav-health {
+    color: #e36a5c;     /* Coral / red */
+}
+
+.nav-safety {
+    color: #5d8fa4;     /* Teal-blue */
+}
+
+
+.nav a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+
+}
+
+
+/* HERO ---------------------------- */
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero-img {
     width: 100%;
     height: auto;
-    display: block;
-    margin: 20px 0;
+    display: overlay;
 }
-.centered {
+
+.hero-overlay {
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translateX(-50%);
+    background: none;
+    width: 90%;
+    max-width: 600px;
+
+    background: rgba(255, 255, 255, 0.85);
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: left;
+}
+
+.hero-overlay h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.hero-overlay p {
+    margin: 0;
+    color: #444;
+    line-height: 1.4;
+}
+
+/* PERKS ---------------------------- */
+
+.perks {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.perk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
     text-align: center;
 }
+
+.perk img {
+    width: 70px;
+    margin: auto;
+}
+
+.perk h3 {
+    margin-top: 10px;
+}
+
+/* STATS ---------------------------- */
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.stats-left h2 {
+    margin-top: 0;
+}
+
+.stats-left h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.cta-btn {
+    background: #f6d774;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background: #e5c45e;
+}
+
+/* SUCCESS STORIES ---------------------------- */
+
+.stories {
+    padding: 40px 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.story-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.story-card h3 {
+    margin-top: 0;
+}
+
+/* FOOTER ---------------------------- */
+
+.footer {
+    background: #fafafa;
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+.footer-logo {
+    width: 60px;
+}
+
+.footer-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-grid ul li {
+    margin: 6px 0;
+}
+
+.footer-grid a {
+    text-decoration: none;
+
+}
+
+.footer-grid a:hover {
+    color: #e3655b;
+    text-decoration: underline;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+/* ==========================================
+   GLOBAL FONT SETUP
+========================================== */
+
+/* BODY TEXT → Poppins */
+body,
+p,
+li,
+nav a,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADINGS → Bagel Fat One (matches wireframe) */
+h1, h2, h3, h4, h5, h6,
+.section-title,
+.perks h3,
+.stats-left h2 {
+    font-family: 'Bagel Fat One', cursive;
+}
+
+/* LOGO TEXT → Freckle Face */
+.brand {
+    font-family: 'Freckle Face', cursive;
+}
+.cta-btn,.story-card h3, .perks h3, .stats-left h3 {
+    font-family: 'Chewy', cursive;
+}
+
